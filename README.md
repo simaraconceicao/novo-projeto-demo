@@ -153,6 +153,39 @@ return <ul>{elementosDaLista}</ul>;
 
 ```
 
+#### O que é o hook useEffect
+Em React, o useEffect é um hook que permite realizar efeitos colaterais em componentes funcionais. Efeitos colaterais podem incluir ações como buscar dados de uma API, manipular o DOM, ou realizar qualquer tarefa assíncrona. O useEffect é útil para lidar com operações que ocorrem após a renderização do componente.
+
+Ou seja, useEffect é o hook que nos possibilita gerar efeitos colaterais na tela quando alguma variável modifica. Com um exemplo vai ficar bem melhor de entender. Vamos lá!
+
+1) Antes de tudo você precisa importar de dentro do react o hook useEffect
+
+```
+import { useEffect } from 'react'
+```
+
+2) Dentro do seu componente antes do retorno chama a função useEffect que recebe dois parametros.
+ >> uma arrow function que vai determinar a ação do efeito colateral
+ >> um array que recebe as dependências, ou seja as variáveis que determinam quando essas mudanças devem acontecer
+
+```
+useEffect(() => {
+  setLista()
+}, [])
+```
+> quando esse array aparece vazio, significa que a interface irá receber os efeitos colaterais quando a tela for carregada
+
+> geralmente utilizamos useEffect com useState
+
+#### Tutorial integração com backend
+
+_1 criar lógica do formulário para após do click do botão mostrar dados no console
+_2 apagar lista mockada
+_3 criar integração com api para o handle do submit e permitir enviar os dados para salvar quando pessoa usuária fizer um cadastro
+_4 criar integração para o get dos cards
+_5 Atualizar a vercel
+
+
 -----
 _Vai ser incrível compartilhar essa jornada com você! Qualquer dúvida ou sugestão, chama no contatinho!_
 
